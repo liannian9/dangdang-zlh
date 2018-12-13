@@ -1,0 +1,37 @@
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+body#login{
+    background: #FFFFFF;
+    font-size: 12px
+}
+#login_header{
+    margin: 12px auto 14px;
+    width: 1200px;
+    height: 60px;
+    a{
+        text-decoration: none;
+        img{
+            float: left;
+            margin: 7px 0 0 0;
+        }
+    }
+    div{
+        float: right;
+        margin-top: 34px;
+        span{
+            display: inline-block;
+            width: 15px;
+            height: 19px;
+            background: url(../img/improve.png) no-repeat 0 0;
+            vertical-align: middle;
+        }
+        a{
+            color:#787878
+        }
+    }
+}

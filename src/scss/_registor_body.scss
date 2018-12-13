@@ -1,0 +1,226 @@
+@mixin clearfix() {
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+
+#resgistor_body {
+    margin: 0 auto;
+    width: 960px;
+    padding-top: 40px;
+    a {
+        text-decoration: none;
+    }
+    .shadowbox {
+        background-color: #ebeeef;
+        width: 950px;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    .registorbox {
+        background: #fff;
+        position: relative;
+        top: -10px;
+        right: -10px;
+        width: 950px;
+        font-family: 'Microsoft YaHei';
+        box-shadow: -1px 1px 1px rgb(232, 235, 236);
+    }
+    .form_header {
+        height: 74px;
+        border-bottom: solid 1px #eceef2;
+        padding-right: 15px;
+        margin: 0 10px;
+        >a {
+            width: 135px;
+            height: 46px;
+            background-color: #f5f5f5;
+            display: inline-block;
+            position: relative;
+            left: 20px;
+            border: 1px solid #eceef2;
+            top: 27px;
+            font-size: 16px;
+            line-height: 42px;
+            text-align: center;
+            color: #464646;
+            margin-left: 6px;
+        }
+        >a:first-of-type {
+            background-color: white;
+            top: 28px;
+            border-bottom: none;
+        }
+        .more {
+            float: right;
+            color: #646464;
+            line-height: 22px;
+            margin-top: 40px;
+            a {
+                color: #646464;
+                &:hover {
+                    color: #ff3c00
+                }
+            }
+            a:first-child {
+                padding-left: 16px;
+                margin-right: 15px;
+                background: url(../img/icon_20150706.png) 0 2px no-repeat;
+            }
+        }
+    }
+    .help {
+        position: fixed;
+        cursor: pointer;
+        z-index: 10001;
+        top: 106px;
+        left: 1113.5px;
+        a {
+            background: url(../img/xiaodangdang.png) no-repeat 0 0 transparent;
+            display: block;
+            height: 120px;
+            width: 34px;
+        }
+    }
+    .form {
+        padding: 45px 0 25px;
+        position: relative;
+        .warning {
+            line-height: 24px;
+            color: #828282;
+            padding-left: 22px;
+            background: url(../img/new_tip.png) 3px 5px no-repeat #fef7f5;
+            width: 670px;
+            border: 1px solid #fedbd1;
+            margin: -30px auto 30px;
+            a {
+                color: #1a66b3;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .submit {
+            padding: 0 0 30px;
+            text-align: center;
+            input{
+                display: inline-block;
+                font-size: 20px;
+                border: 0;
+                width: 178px;
+                height: 44px;
+                line-height: 29px;
+                text-align: center;
+                background-color: #ff2832;
+                color: #fff;
+                border-radius: 22px;
+            }
+        }
+        .agree {
+            padding: 4px 0 35px;
+            color: #3d3d3d;
+            text-align: center;
+            a {
+                color: #1a66b3;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .error_tip {
+                display:block!important;
+                padding: 8px 0 8px 348px!important;
+                color: #787878;
+                line-height: 14px!important;
+                height: 14px!important;
+                text-align:left;
+            }
+            .error{
+                color:red;
+            }
+        }
+        .code {
+            position: relative;
+            input {
+                width: 150px;
+                vertical-align: middle;
+                margin-right: 5px;
+                padding-right:20px;
+                position:relative;
+            }
+            i {
+                display:inline-block;
+                margin-right: 3px;
+                height: 37px;
+                width: 84px;
+                vertical-align: middle;
+                background: red;
+            }
+            span{
+               display: inline-block;
+                width: 16px;
+                height: 16px;
+                position:absolute;
+                top:11px;
+                left:510px;
+            }
+        }
+        div {
+            position:relative;
+            .title {
+                display: inline-block;
+                float: left;
+                font-size: 14px;
+                width: 338px;
+                padding-right: 10px;
+                text-align: right;
+                vertical-align: top;
+                color: #646464;
+                padding-top: 11px;
+            }
+            input {
+                display: inline-block;
+                border: 1px solid #e6e6e6;
+                height: 18px;
+                width: 290px;
+                margin-right: 10px;
+                padding: 9px 10px;
+                line-height: 18px;
+                outline: 0 none;
+                border-radius: 2px;
+                color: #333;
+            }
+//          span {
+//              display: inline-block;
+//              width: 16px;
+//              height: 16px;
+//              position:absolute;
+//              top:11px;
+//              left:668px;
+//              
+//          }
+            .ok {
+                width:20px;
+                background: url('https://login.dangdang.com/images/icon_20150706.png') 2px -38px no-repeat;
+            }
+            .wrong{
+                 background: url('https://login.dangdang.com/images/icon_20150706.png') 0 -20px no-repeat;
+            }
+            .error_tip {
+                display:block!important;
+                padding: 6px 0 6px 348px!important;
+                color: #787878;
+                line-height: 18px!important;
+                height: 18px!important;
+                span{
+                    float:left;
+                    line-height: 18px;
+                    height: 18px;
+                    font-size:12px;
+                }
+            }
+            
+        }
+    }
+}

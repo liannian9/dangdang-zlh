@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script src="script/thirdplugins/require.js" async="true" defer="defer" data-main="script/js/login.js"></script>
+	<title>登录页面</title>
+</head>
+<body id="login">
+	<div id="login_header">
+		<a href="index.html"><img src="img/logo.png" alt="" /></a>
+		<div><span></span><a href="javascript:;">“登录页面“改进建议</a></div>
+	</div>
+	<div id="login_body">
+		<a href="index.html"></a>
+		<div class="form">
+			<div class="warning">
+				<p> 
+					请勿设置与邮箱及其他网站相同的登录及支付密码，<a href="javascript:;">谨防诈骗！</a>
+				</p>
+			</div>
+			<div class="tab">
+				<a href="javascript:;" class="code_login" st></a>
+				<a href="javascript:;" class="password_login dis"></a>
+			</div>
+			<div class="info">
+				<div class="info_inner">
+					<em class="icon"></em>
+					<span class="code_login">扫码登录更安全</span>
+					<span class="password_login dis">密码登录在这里</span>
+					<i></i>
+				</div>
+			</div>
+			<div class="tab_form">
+				<form action="" method="post" id="login_form" class="password_login" target="_blank">
+					<p>密码登录</p>
+					<div class="username">
+						<span></span>
+						<input type="text" id="username" name="username" placeholder="邮箱/昵称/手机号码" autocomplete="off"/>
+					</div>
+					<p class="remind"><label  id="username-error" class=" error" for="username"></label></p>
+					<div class="password">
+						<span></span>
+						<input type="password" name="password" id="password" placeholder="密码" autocomplete="off"/>
+					</div>
+					<p class="remind"><label  id="password-error" class="remind error" for="password"></label></p>
+					<div class="safe_code">
+						<p><span>请点击下方图片，旋转至正确方向</span><a href="javascript:;">换一组</a></p>
+						<div class="rotate">
+							<div class="img1"></div>
+							<div class="img2"></div>
+							<div class="img3"></div>
+							<div class="img4"></div>
+						</div>
+					</div>
+					<div class="auto_login">
+						<input type="checkbox" checked="checked"/>
+						<span>请勿在公用电脑上勾选此选项</span>
+						<a href="javascript:;">忘记密码</a>
+					</div>
+					<div class="submit">
+						<a href="javascript:;" >登录</a>
+					</div>
+					<div class="partner">
+						<span>使用合作网站登录</span>
+						<a href="registor.html">立即注册</a>
+					</div>
+					<div class="partner_logo">
+						<a href="javascript:;">QQ</a>
+						<a href="javascript:;">微信</a>
+						<a href="javascript:;">网易</a>
+						<a href="javascript:;">支付宝</a>
+						<a href="javascript:;" class="more">更多<em></em></a>
+					</div>
+				</form>
+				<form class="code_login dis">
+					<p>扫码登录</p>
+					<div class="scan_code">
+						<div class="two_code">
+							<img src="https://login.dangdang.com/p/get_qrcode.php?t=1543981878979" alt="二维码" />
+						</div>
+						<div class="tel_pic">
+							<img src="" alt="手机图片" />
+						</div>
+					</div>
+					<div class="tel_remind">
+						<p>打开<a href="javascript:;"><span>手机当当</span></a> 扫一扫登录</p>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="footer"></div>
+	
+</body>
+</html>

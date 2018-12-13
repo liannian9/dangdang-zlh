@@ -1,0 +1,531 @@
+@charset "utf-8";
+@mixin clearfix() {
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+
+body#cart {
+    font-family: "Microsoft Yahei", 'Hiragino Sans GB', "Simsun", "Arial";
+    font-size: 12px;
+    color: #969696;
+    line-height: 1;
+    background: #fff;
+    word-break: break-all;
+    .red {
+        color: red;
+    }
+    a {
+        text-decoration: none;
+    }
+    .checkbox {
+        a {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #bcbcbc;
+            background-color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            margin: 0 10px 0 0;
+            vertical-align: text-bottom
+        }
+        .on {
+            border-color: #ff2832;
+            background: #ff2832 url('http://shopping.dangdang.com/shoppingcart/images/icon_sprite.png') no-repeat -65px -1px;
+        }
+    }
+}
+
+#cart_header {
+    /*购物车顶部*/
+    width: 100%;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #f2f2f2;
+    line-height: 34px;
+    z-index: 10010;
+    position: relative;
+    border-bottom: 4px solid #ff2832;
+    a {
+        color: #646464;
+        text-decoration: none;
+    }
+    .tools {
+        width: 100%;
+        background-color: #f9f9f9;
+        border-bottom: 1px solid #f2f2f2;
+        height: 34px;
+        line-height: 34px;
+        z-index: 10010;
+        position: relative;
+    }
+    .public {
+        width: 960px;
+        margin: 0 auto;
+        background-color: #f9f9f9;
+        height: 34px;
+    }
+    .welcome {
+        float: left!important;
+    }
+    .tools_nav {
+        float: right!important;
+    }
+    .ad {
+        width: 960px;
+        margin: 0 auto;
+        padding: 17px 0 0;
+        a {
+            display: block;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: 60px;
+        }
+    }
+    .direct {
+        width: 960px;
+        margin: 0 auto;
+        height: 104px;
+        span {
+            width: 209px;
+            display: inline-block;
+            text-align: center;
+        }
+        .current {
+            color: #fff;
+            width: 206px;
+        }
+        .logo {
+            padding: 20px 0 0 15px;
+            float: left;
+        }
+        .shopping_procedure {
+            float: right;
+            width: 634px;
+            height: 36px;
+            background: url('http://shopping.dangdang.com/shoppingcart/images/procedure_bg.png') 0 0 no-repeat;
+            font: bold 14px/36px "Microsoft Yahei";
+            color: #646464;
+            margin: 30px 0 0;
+        }
+    }
+}
+
+#fixedbar {
+    /*侧边栏问卷调查*/
+    left: 50%;
+    margin-left: 480px;
+    position: fixed;
+    bottom: 103px;
+    >div {
+        width: 18px;
+        text-align: center;
+        padding: 6px 0;
+        border: solid 1px #e4e4e4;
+        border-radius: 2px;
+        background: #fff;
+        line-height: 16px;
+        a {
+            text-decoration: none;
+            font-size: 12px;
+            color: #878787;
+        }
+    }
+}
+
+
+#cart_section_unlogin {
+    /*购物车未登录*/
+    width: 465px;
+    margin: 0 auto;
+    height: 190px;
+    padding: 90px 0 0 495px;
+    background: url('http://shopping.dangdang.com/shoppingcart/images/empty.png') 90px 46px no-repeat;
+    p {
+        font-size: 14px;
+        color: #8a8888;
+    }
+    a:first-of-type {
+        width: 116px;
+        height: 38px;
+        display: inline-block;
+        background-color: #ff2832;
+        color: #fff;
+        text-align: center;
+        line-height: 38px;
+        font-size: 18px;
+        margin: 30px 20px 0 0;
+        border-radius: 2px;
+        &:hover {
+            background-color: #d21f2b
+        }
+    }
+    a:last-child {
+        text-decoration: none;
+        color: #969696;
+        &:hover {
+            color: #FF2832;
+            text-decoration: underline;
+        }
+    }
+}
+
+#cart_section_empty {
+    /*购物车为空*/
+    width: 465px;
+    margin: 0 auto;
+    padding: 90px 0 0 495px;
+    background: url('http://shopping.dangdang.com/shoppingcart/images/empty.png') 90px 46px no-repeat;
+    height: 190px;
+    p {
+        font-size: 14px;
+        color: #8a8888;
+    }
+    a:first-of-type {
+        width: 116px;
+        height: 38px;
+        display: inline-block;
+        background-color: #ff2832;
+        color: #fff;
+        text-align: center;
+        line-height: 38px;
+        font-size: 18px;
+        margin: 30px 20px 0 0;
+        border-radius: 2px;
+        &:hover {
+            background-color: #d21f2b
+        }
+    }
+    
+}
+
+.w960 {
+    margin: 0 auto;
+    width: 960px;
+}
+
+#cart_section_has {
+    /*购物车不为空*/
+    .cart_address {
+        /*购物---------------地址--------*/
+        background-color: #fafafa;
+        .address {
+            height: 22px;
+            line-height: 22px;
+            margin: 15px 0;
+            background-color: #fcfcfc;
+            border: 1px solid #ebebeb;
+            padding: 0 15px;
+            border-radius: 12px;
+            display: inline-block;
+            >span {
+                width: 22px;
+                height: 22px;
+                background: url('http://shopping.dangdang.com/shoppingcart/images/icon_sprite.png') 0 5px no-repeat;
+                display: inline-block;
+                margin-right: 5px;
+            }
+            >div {
+                position: relative;
+                top: -6px;
+                display: inline-block;
+            }
+            .select_add {
+                /*购物---------------选择地址--------*/
+                >span {
+                    color: #646464;
+                    border: 1px solid #ebebeb;
+                    border-width: 0 1px;
+                    height: 22px;
+                    line-height: 22px;
+                    padding: 0 14px 0 5px;
+                    background: url('http://shopping.dangdang.com/shoppingcart/images/icon_sprite.png') no-repeat right -53px #fff;
+                    cursor: pointer;
+                    position: relative;
+                    z-index: 88;
+                    display: block;
+                }
+            }
+        }
+    }
+    .shopping_list {
+        /*购物-------------购物清单--------*/
+        margin: 10px auto 0;
+        width: 960px;
+        @include clearfix();
+        .shopping_title {
+            /*购物-------------购物清单标题栏--------*/
+            line-height: 36px;
+            height: 36px;
+            margin-top: 10px;
+            >div {
+                float: left;
+                text-align: center;
+            }
+            .checkall {
+                text-align: left;
+                width: 202px
+            }
+            .title1 {
+                text-align: left;
+                width: 280px;
+            }
+            .title2 {
+                width: 130px;
+            }
+            .title3 {
+                width: 130px;
+            }
+            .title4 {
+                width: 130px;
+            }
+            .title5 {
+                width: 70px;
+            }
+        }
+        .shopping_products {
+            /*购物-------------购物清单产品栏--------*/
+            .dd_self {
+                color: #323232;
+                font-weight: bold;
+                line-height: 24px;
+                height: 24px;
+                margin: 10px 0;
+                padding-left: 15px;
+                @include clearfix();
+                >div {
+                    float: left;
+                }
+                .s_logo {
+                    width: 18px;
+                    height: 18px;
+                    background: url('http://shopping.dangdang.com/shoppingcart/images/icon_sprite.png') 0 -30px no-repeat;
+                    margin: 4px 8px 0 0;
+                }
+            }
+            .content {
+                >a {
+                    color: #323232;
+                    text-decoration: none;
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+            .list {
+                /*购物-------------购物清单产品栏-清单-------*/
+                width: 958px;
+                border: 1px solid #ebebeb;
+                background-color: #fafafa;
+                margin-bottom: 40px;
+            }
+        }
+        .list_show {
+            border-bottom: 1px solid #ebebeb;
+            @include clearfix();
+            >div {
+                float: left;
+                height: 120px;
+            }
+            .checkbox {
+                position: relative;
+                text-align: center;
+                width: 52px;
+                a {
+                    position: absolute;
+                    left: 19px;
+                    top: 53px;
+                }
+            }
+            .img {
+                height: 80px;
+                padding: 20px 20px 20px 0;
+                width: 80px;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .content {
+                height: 103px;
+                width: 330px;
+                line-height: 18px;
+                text-align: left;
+                padding-top: 17px;
+                a:hover {
+                    color: #FF2832;
+                }
+            }
+            .one_money {
+                height: 105px;
+                width: 130px;
+                line-height: 22px;
+                text-align: center;
+                padding-top: 15px;
+                >span:first-child {
+                    color: #323232;
+                    font-size: 13px;
+                }
+                >span {
+                    display: block;
+                    height: 22px;
+                }
+            }
+            .count {
+                height: 105px;
+                width: 130px;
+                line-height: 22px;
+                text-align: center;
+                padding-top: 15px;
+                >a {}
+            }
+            .count_box {
+                border: 1px solid #dcdcdc;
+                height: 28px;
+                width: 94px;
+                line-height: 28px;
+                font-size: 14px;
+                margin: 5px auto;
+                >a {
+                    float: left;
+                    height: 28px;
+                    width: 28px;
+                    background-color: #f4f4f4;
+                    color: #323232;
+                }
+                input {
+                    width: 36px;
+                    height: 28px;
+                    line-height: 28px;
+                    float: left;
+                    text-align: center;
+                    border: 1px solid #dcdcdc;
+                    border-width: 0 1px;
+                    background-color: #fff;
+                    font-weight: bold;
+                }
+            }
+            .money_total {
+                height: 105px;
+                width: 130px;
+                line-height: 22px;
+                text-align: center;
+                padding-top: 15px;
+            }
+            .delete {
+                height: 105px;
+                width: 70px;
+                line-height: 22px;
+                text-align: center;
+                padding-top: 15px;
+                a {
+                    display: block;
+                    color: #323232;
+                }
+                a:hover {
+                    color: #FF2832;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .list_total {
+            >div {
+                float: left;
+            }
+            height:53px;
+            .shopping_total {
+                width: 80px;
+                text-align: center;
+                color: #323232;
+                font-weight: bold;
+                line-height: 22px;
+                font-size: 12px;
+                padding: 15px 20px 15px 52px;
+            }
+            .shopping_tip {
+                margin-left: 440px;
+                padding-top: 15px;
+                line-height: 22px;
+                span {
+                    color: #323232;
+                }
+            }
+            .money_total {
+                margin-left: 100px;
+                padding-top: 15px;
+                line-height: 22px;
+                font-size: 16px;
+            }
+        }
+    }
+    .close_count {
+        /*购物-------------结算栏-------*/
+        width: 960px;
+        height: 72px;
+        margin: 40px auto;
+        padding: 0 62px;
+        background: url('http://shopping.dangdang.com/shoppingcart/images/shopping_total.png') 0 center no-repeat;
+        @include clearfix();
+        .left {
+            float: left;
+            width: 430px;
+            line-height: 58px;
+            @include clearfix();
+            >div {
+                float: left;
+            }
+            >a {
+                float: left;
+                margin-left: 28px;
+                color: #323232;
+                &:hover {
+                    color: #FF2832;
+                    text-decoration: underline;
+                }
+            }
+            >span {
+                float: left;
+                margin-left: 80px;
+            }
+        }
+        .right {
+            margin:18px 0;
+            float: right;
+            width: 530px;
+            @include clearfix();
+            >a {
+                line-height: 38px;
+                float: right;
+                width: 116px;
+                height: 38px;
+                font-size:18px;
+                font-weight:bold;
+                color: #fff;
+                background-color: #ff2832;
+                border-radius: 2px;
+                text-align: center;
+                margin-top: 4px;
+            }
+            >div {
+                float: right;
+                
+                p{
+                    height:24px;
+                    line-height:24px;
+                    margin-right:20px;
+                    text-align:center;
+                    
+                    
+                }
+                .red{
+                    font-size:20px;
+                }
+            }
+        }
+    }
+}

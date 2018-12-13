@@ -1,0 +1,835 @@
+@charset "utf-8";
+@mixin clearfix() {
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+
+body#details {
+    font-size: 12px;
+    color: #666;
+    font-family: 'Microsoft YaHei';
+    .large_box {
+        /*---------点击小放大镜弹出巨型放大镜--------*/
+       display:none;
+        width: 782px;
+        height: 624px;
+        background: #fff;
+        position: absolute;
+        left:0;
+        top:0;
+
+        border: 1px solid #EEEEEE;
+        z-index: 20000;
+        @include clearfix();
+        .pic_box {
+            float: left;
+            width: 600px;
+            height: 600px;
+            margin: 12px;
+            position:relative;
+            >div{
+                position:absolute;
+                width:300px;
+                height:600px;
+                top:0;
+                
+            }
+            .left{
+                left:0;
+                cursor:url(/dangdang--/src/img/large_cur_l.cur),pointer;
+            }
+            .right{
+                left:300px;
+                cursor:url(/dangdang--/src/img/large_cur_r.cur),pointer;
+            }
+            a {
+                display: block;
+            }
+            img {
+                width: 600px;
+                height: 600px;
+            }
+        }
+        .banner_box {
+            width: 82px;
+            height: 582px;
+            position: relative;
+            margin:10px 21px;
+            float:left;
+            >a {
+                display: block;
+
+                margin:0 24px;
+                width: 33px;
+                height: 20px;
+                background-image: url('http://product.dangdang.com/images/product_sprites.png');
+                background-repeat: no-repeat;
+                background-color: #969696;
+            }
+            .top {
+                background-position: 0 -620px;
+            }
+            .bottom {
+                background-position: -33px -620px;
+            }
+            .large_see_box {
+                
+                height: 528px;
+                margin: 7px 0;
+                overflow:hidden;
+            }
+            ul {
+                height: 520px;
+                padding:4px 0;
+            }
+            .active{
+                span{
+                    display:none;
+                }
+                
+            }
+            li {
+                margin: 0px 1px 8px;
+                width: 80px;
+                height: 80px;
+                position:relative;
+                span{
+                    display:block;
+                    width:80px;
+                    height:80px;
+                    background: #fff;
+                    opacity: 0.7;
+                    filter: alpha(opacity=70);
+                    position:absolute;
+                    left:0;
+                    top:0;
+                }
+                a {
+                    display: block;
+                }
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+        .close {
+            width: 11px;
+            height: 11px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            a {
+                display: block;
+                width: 11px;
+                height: 11px;
+                background: url('http://product.dangdang.com/images/product_sprites.png') no-repeat -25px -140px;
+            }
+        }
+    }
+}
+
+
+/*头部部分*/
+
+#details_header {
+    width: 100%;
+    background-color: #fff;
+    z-index: 10010;
+    position: relative;
+    a {
+        color: #646464;
+        text-decoration: none;
+    }
+    .tools {
+        width: 100%;
+        background-color: #f9f9f9;
+        border-bottom: 1px solid #f2f2f2;
+        height: 34px;
+        line-height: 34px;
+        z-index: 10010;
+        position: relative;
+    }
+    .public {
+        width: 1200px;
+        margin: 0 auto;
+        background-color: #f9f9f9;
+        height: 34px;
+    }
+    .tools_nav {
+        float: right!important;
+    }
+}
+
+#details_sections {
+    /*--------主体部分-------*/
+    width: 1200px;
+    margin: 10px auto 40px;
+    font: 12px "Hiragino Sans GB", "Verdana", "Simsun";
+    background-color: #fff;
+    @include clearfix();
+    .ad {
+        /*---------主体广告部分--------*/
+        width: 1198px;
+        border: 1px solid #dcdddd;
+        overflow: hidden;
+    }
+    .breadcrumb {
+        /*---------主体面包屑导航--------*/
+        color: #646464;
+        font: 12px/40px "simsun";
+        height: 40px;
+        padding-bottom: 8px;
+        position: relative;
+        z-index: 10000;
+        a {
+            color: #646464;
+            float: left;
+        }
+        span {
+            color: #323232;
+            float: left;
+        }
+        .gt {
+            color: #646464;
+            margin: 1px 6px 0;
+        }
+    }
+    .product_show {
+        /*---------主体图片展示--------*/
+        width: 1200px;
+        margin: 0 auto;
+        @include clearfix();
+    }
+    .pic_show {
+        float: left;
+        width: 320px;
+        padding: 0 20px 30px 0;
+        position: relative;
+        @include clearfix();
+        .bf {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            border: 1px solid #ccc;
+            left: 320px;
+            top: 0px;
+            overflow: hidden;
+            z-index: 10000;
+            display: none;
+            img {
+                position: absolute;
+            }
+        }
+        .mid_pic {
+            /*---------主体图片展示-中图-------*/
+            width: 320px;
+            height: 320px;
+            margin: 0 auto;
+            position: relative;
+            img {
+                display: block;
+                width: 320px;
+                height: 320px;
+                overflow: hidden;
+            }
+            .xf {
+                width: 160px;
+                height: 160px;
+                cursor: move;
+                position: absolute;
+                background: url('http://product.dangdang.com/images/zoom_pup.png');
+                display: none;
+            }
+        }
+        .sale_lable {
+            /*---------主体图片展示-售卖信息 标签-------*/
+            margin-top: 10px;
+            position: relative;
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+            p {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                line-height: 48px;
+                text-align: center;
+                font-size: 22px;
+                font-family: "Microsoft YaHei";
+                color: #fff;
+                letter-spacing: 3px;
+                font-weight: bold;
+            }
+        }
+        .small_pic {
+            /*---------主体图片展示-小图轮播-------*/
+            width: 320px;
+            margin: 8px auto 0;
+            position: relative;
+            >a {
+                position: absolute;
+                height: 56px;
+                width: 14px;
+                top: 0;
+                background: #969696 url('http://product.dangdang.com/images/product_sprites.png') no-repeat 0 0;
+                &:hover {
+                    background-color: #fb7a80
+                }
+            }
+            .left {
+                left: 0;
+            }
+            .right {
+                right: 0;
+                background-position: -15px 0;
+            }
+        }
+        .small_box {
+            visibility: visible;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            left: 0px;
+            width: 295px;
+            height: 56px;
+            margin-left: 14px;
+            .see_box {
+                position: absolute;
+                left: 0;
+                top: 0;
+                //              height:56px;
+            }
+            ul {
+                float: left;
+                z-index: 1;
+                margin: 0px;
+                padding: 0px;
+                width: 295px;
+                @include clearfix();
+            }
+            li {
+                overflow: hidden;
+                float: left;
+                width: 56px;
+                height: 56px;
+                margin: 0 1px;
+                a {
+                    display: block;
+                    border: 1px solid #fff;
+                    width: 54px;
+                    height: 54px;
+                    overflow: hidden;
+                    overflow: hidden;
+                    text-decoration: none;
+                }
+                img {
+                    width: 54px;
+                    height: 54px;
+                }
+            }
+        }
+        .share {
+            /*---------主体图片展示-分享信息-------*/
+            padding-top: 5px;
+            position: relative;
+            >a {
+                float: left;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+                i {
+                    float: left;
+                    width: 13px;
+                    height: 13px;
+                    overflow: hidden;
+                    background: url('http://product.dangdang.com/images/product_sprites.png') no-repeat 0 0;
+                    margin: 2px 5px 0 0;
+                    position: relative;
+                }
+            }
+            >span {
+                float: left;
+                padding-right: 20px;
+                color: #969696;
+                float: left;
+                margin-top: 4px;
+                i {
+                    float: left;
+                    width: 13px;
+                    height: 13px;
+                    overflow: hidden;
+                    background: url('http://product.dangdang.com/images/product_sprites.png') no-repeat 0 0;
+                    margin: 2px 5px 0 0;
+                    position: relative;
+                    background-position: -15px -60px;
+                }
+            }
+            >a:first-child {
+                padding-right: 20px;
+                color: #969696;
+                float: left;
+                margin-top: 4px;
+                height: 26px;
+                i {
+                    background-position: 0 -60px;
+                }
+            }
+            >a:last-child {
+                color: #969696;
+                float: left;
+                margin-top: 4px;
+                i {
+                    background-position: -30px -60px;
+                }
+            }
+        }
+    }
+    .information {
+        /*---------主体文字展示-主体信息-标题价格及服务等------*/
+        float: left;
+        width: 860px;
+        font: 12px "Verdana", "Simsun";
+        color: #646464;
+    }
+    .information_box {
+        line-height: 24px;
+        padding: 0 0 0 10px;
+        background: url('http://product.dangdang.com/images/sale_box_bg.png') repeat-y 670px 0;
+        margin-top: 5px;
+        .main {
+            /*---------主体文字展示-主体信息-标题价格等------*/
+            width: 630px;
+            float: left;
+            .title_info {
+                /*---------主体文字展示-主体信息-标题及简介------*/
+                font-family: "Verdana", "Microsoft Yahei";
+                font-weight: normal;
+                border-bottom: 1px solid #f5f5f5;
+                padding: 0 6px 12px 0;
+                img {
+                    position: relative;
+                    top: 2px;
+                }
+                a {
+                    color: #1a66b3;
+                    text-decoration: none;
+                }
+            }
+            h2 {
+                line-height: 24px;
+                max-height: 48px;
+                overflow: hidden;
+                color: #323232;
+                font-size: 18px;
+                margin: 0 auto;
+            }
+            h3 {
+                padding-top: 6px;
+                max-height: 96px;
+                overflow: hidden;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: normal;
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+            .publish {
+                /*---------主体文字展示-主体信息-出版信息------*/
+                a {
+                    color: #1a66b3;
+                    text-decoration: none;
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+                >span {
+                    display: inline-block;
+                    padding-right: 25px;
+                }
+            }
+            .comment {
+                /*---------主体文字展示-主体信息-排名星级别------*/
+                >span {
+                    display: inline-block;
+                    padding-right: 25px;
+                }
+                >a {
+                    height: 16px;
+                    line-height: 16px;
+                    border: 1px solid;
+                    padding: 0 8px 0 9px;
+                    overflow: hidden;
+                    border-radius: 2px;
+                    text-decoration: none;
+                    background: #ff6d6b;
+                    border-color: #ff6d6b;
+                    color: white;
+                }
+            }
+        }
+        .star {
+            >span {
+                float: left;
+                width: 70px;
+                height: 12px;
+                background: url('http://product.dangdang.com/images/icon_star.png') repeat-x 0 12px;
+                margin: 6px 6px 0 0;
+                >span {
+                    background: url('http://product.dangdang.com/images/icon_star.png') repeat-x 0 0px;
+                    display: block;
+                    height: 12px;
+                }
+            }
+            a {
+                float: left;
+            }
+        }
+        .price {
+            /*---------主体文字展示-主体信息-价格信息------*/
+            background-color: #ebebeb;
+            padding: 0 0 0 10px;
+            margin: 6px 0 0 -10px;
+            line-height: 28px;
+            position: relative;
+            width: 630px;
+            z-index: 6666;
+            @include clearfix();
+        }
+        .price_box {
+            float: left;
+            padding-bottom: 7px;
+            >div {
+                float: left;
+                height: 56px;
+                overflow: hidden;
+                padding: 3px 5px 0 0;
+            }
+        }
+        .price_now {
+            float: left;
+            height: 56px;
+            overflow: hidden;
+            padding: 3px 5px 0 0;
+            >p:first-child {
+                color: #8f8f8f;
+                font-weight: normal;
+                font-size: 12px;
+            }
+            .dd_price {
+                font-size: 26px;
+                color: #e52222;
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+        .price_discount {
+            line-height: 93px;
+            color: #e52222;
+        }
+        .pricing {
+            line-height: 93px;
+            color: #969696;
+        }
+        .price_before {
+            line-height: 93px;
+            text-decoration: line-through;
+            color: #969696;
+            >span:first-child {
+                text-decoration: none;
+            }
+        }
+        .cuxiao {
+            /*---------主体文字展示-主体信息-促销------*/
+            padding: 5px 0 7px;
+            border-bottom: 1px dotted #d6d6d6;
+            clear: both;
+            @include clearfix();
+        }
+        .left {
+            float: left;
+            width: 68px;
+            color: #969696;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .right {
+            a {
+                text-decoration: none;
+            }
+            float: left;
+            width: 562px;
+            color: #646464;
+            >div {
+                @include clearfix();
+                >b {
+                    float: left;
+                    background-color: #f66;
+                    color: #fff;
+                    font-weight: normal;
+                    padding: 0 6px;
+                    height: 16px;
+                    line-height: 16px;
+                    border-radius: 3px;
+                    margin-top: 5px;
+                    overflow: hidden;
+                }
+            }
+            .rule {
+                float: left;
+                margin-left: 10px;
+            }
+        }
+        .checkbox {
+            float: left;
+            width: 12px;
+            height: 12px;
+            border: 1px solid #969696;
+            background-color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            font-size: 0;
+            line-height: 36px;
+            overflow: hidden;
+            margin: 5px;
+        }
+        .e_book {
+            .rule {
+                border: 1px dotted #d7d7d7;
+                width: 325px;
+            }
+            a {
+                float: left;
+                color: #646464;
+            }
+        }
+        .full_reduce {
+            a {
+                color: #969696;
+            }
+        }
+        .raise_price {
+            a {
+                color: #969696;
+            }
+        }
+        .shipments {
+            @include clearfix();
+            padding-top: 8px;
+        }
+        .address {
+            /*---------主体文字展示-主体信息-地址信息------*/
+            padding-top: 8px;
+            @include clearfix();
+            span {
+                float: left;
+                border: 1px solid #ccc;
+                height: 18px;
+                line-height: 16px;
+                padding: 0 14px 0 5px;
+                background: #fff url('http://product.dangdang.com/images/product_sprites.png') no-repeat right -313px;
+                cursor: pointer;
+                margin: 3px 8px 0 0;
+            }
+            b {
+                float: left;
+                padding: 0 6px 0 0;
+            }
+            a {
+                color: #646464;
+            }
+        }
+        .buy_info {
+            /*---------主体文字展示-购买信息-------*/
+            padding: 30px 0 35px;
+            >div {
+                float: left;
+            }
+            .num {
+                height: 34px;
+                border: 1px solid #e9e9e9;
+                width: 38px;
+                padding-right: 23px;
+                overflow: hidden;
+                text-align: center;
+                position: relative;
+                input {
+                    width: 38px;
+                    height: 32px;
+                    line-height: 32px;
+                    border: 0;
+                    background: #fff;
+                    text-align: center;
+                }
+                >a {
+                    position: absolute;
+                    right: 0;
+                    display: block;
+                    width: 23px;
+                    height: 17px;
+                    background-image: url('http://product.dangdang.com/images/product_sprites.png');
+                    background-repeat: no-repeat;
+                    background-color: #646464;
+                    margin-left: 6px
+                }
+                a:nth-of-type(1) {
+                    background-position: -37px 0;
+                    top: 0;
+                }
+                a:nth-of-type(2) {
+                    background-position: -37px -17px;
+                    top: 17px;
+                }
+            }
+            .buy_box {
+                float: left;
+                width: 567px;
+                i {
+                    float: left;
+                    width: 20px;
+                    height: 19px;
+                    background: url('http://product.dangdang.com/images/product_sprites.png') no-repeat -40px -35px;
+                    margin: 9px 4px 0 0;
+                }
+                a {
+                    height: 36px;
+                    margin: 0 0 3px 10px;
+                    float: left;
+                    padding: 0 15px;
+                    border-radius: 3px;
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 16px;
+                    line-height: 36px;
+                    font-weight: bold;
+                }
+                a:first-child {
+                    background-color: #ff2832
+                }
+                a:last-child {
+                    border: 1px solid #ff2832;
+                    color: #ff2832;
+                    background-color: #ffedee
+                }
+            }
+        }
+        .service_more {
+            /*---------主体文字展示-主体信息-服务信息------*/
+            float: left;
+            width: 180px;
+            padding-left: 10px;
+            margin-top: 0;
+            margin-left: 29px;
+            font-family: "Simsun", "Verdana";
+        }
+        .service_more_box {
+            border-top: 1px solid #f5f5f5;
+            .title {
+                /*---------主体文字展示-主体信息-服务信息-标题-----*/
+                line-height: 18px;
+                padding: 10px 0 8px;
+                border-bottom: 1px dotted #ccc;
+                @include clearfix();
+                .icon {
+                    float: left;
+                    width: 18px;
+                    height: 18px;
+                    overflow: hidden;
+                    background-image: url('http://product.dangdang.com/images/product_sprites.png');
+                    background-repeat: no-repeat;
+                    margin: 1px 5px 0 0;
+                    background-position: 0 -230px;
+                }
+                >span:last-child {
+                    color: #ff2832;
+                    float: left;
+                }
+            }
+            .service {
+                /*---------主体文字展示-主体信息-服务信息--明细------*/
+                padding: 3px 0 6px;
+                @include clearfix();
+                li {
+                    float: left;
+                    width: 90px;
+                    height: 26px;
+                    line-height: 26px;
+                    color: #855758;
+                    position: relative;
+                    z-index: 100;
+                }
+                .other {
+                    width: 180px;
+                }
+                i {
+                    float: left;
+                    width: 20px;
+                    height: 20px;
+                    overflow: hidden;
+                    background-image: url('http://product.dangdang.com/images/product_sprites.png');
+                    background-repeat: no-repeat;
+                    margin: 3px 3px 0 0;
+                }
+                a {
+                    color: #855758;
+                    text-decoration: none;
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+                .zpfw {
+                    background-position: -20px -250px;
+                }
+                .hdfk {
+                    background-position: -60px -250px;
+                }
+                .fwzc {
+                    background-position: 0 -250px;
+                }
+                .cjfh {
+                    background-position: -80px -250px;
+                }
+                .hh {
+                    background-position: -40px -250px;
+                }
+                .lpbz {
+                    background-position: 0 -270px;
+                }
+                .zcth {
+                    background-position: -20px -270px;
+                }
+                .zclp {
+                    background-position: -42px -814px;
+                }
+            }
+        }
+        .service_robot {
+            /*---------主体文字展示-主体信息-服务信息--机器人售后------*/
+            border-top: 1px dotted #ccc;
+            position: relative;
+            padding-top: 10px;
+            background: #fff;
+            margin-bottom: -1px;
+            height: 30px;
+            span {
+                float: left;
+                width: 70px;
+                height: 27px;
+                overflow: hidden;
+                background: url('http://product.dangdang.com/images/service_dj.gif') no-repeat 0 0;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}

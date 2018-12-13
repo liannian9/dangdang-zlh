@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh" id="resgistor">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<script src="script/thirdplugins/require.js" async="true" defer="defer" data-main="script/js/registor.js"></script>
+	<title>注册页面</title>
+</head>
+<body>
+	<!-----------------zhuce注册头部-->
+	<div id="resgistor_header">
+		<div class="header">
+	<!------------------zhuce注册头部左侧logo-->
+			<div class="left">
+				<a href="index.html">
+					<img src="https://login.dangdang.com/images/ddnewhead_logo.gif" alt="" />
+				</a>
+			</div>
+	<!------------------zhuce注册头部右侧导航-->
+			<div class="right">
+				<ul class="top">
+					<li><a href="cart.html">帮助</a></li>
+					<li></li>
+					<li><a href="cart.html">企业销售</a></li>
+					<li></li>
+					<li><a href="cart.html">手机当当</a></li>
+					<li></li>
+					<li><a href="cart.html">礼品卡</a></li>
+					<li></li>
+					<li><a href="cart.html">我的当当</a></li>
+					<li></li>
+					<li><a href="cart.html">我的订单</a></li>
+					<li></li>
+					<li><a href="cart.html">购物车</a></li>
+				</ul>
+				<div class="bottom">
+					欢迎光临当当网，请
+					<a href="login.html">登录</a>
+					<a href="registor.html">免费注册</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<!------------------注册主体-->
+	<div id="resgistor_body">
+<!------------------注册主体阴影-->
+		<div class="shadowbox">
+<!------------------注册主体表单-->
+			<div class="registorbox">
+<!------------------注册主体表单头部-->
+				<div class="form_header">
+					<span class="more">
+						<a href="index.html" class="home">当当首页</a>
+						<a href="javascript:;">注册帮助</a>
+					</span>
+					<a href="javascript:;">新用户注册</a>
+					<a href="javascript:;">企业用户注册</a>
+				</div>
+<!------------------注册主体表单客服-->
+				<div class="help"><a href="javascript:;"></a></div>
+<!------------------注册主体表单主体-->
+				<div class="form">
+					<div class="warning">
+						<div >
+							贴心提示：请勿设置与邮箱密码相同的账户登录密码或支付密码，防止不法分子窃取您的当当账户信息，
+							<a href="javascript:;">谨防诈骗</a>
+						</div>
+					</div>
+					<form action="http://10.31.155.148/dangdang--/php/registor.php" method="post" id="registor_form">
+						<div class="tel">
+							<label for="tel" class="title" >手机号码</label>
+							<input type="text" name="tel" id="tel" autocomplete="off"/>
+							
+							<label  id="tel-error" class="error error_tip" for="tel">手机号可用于登录、找回密码、接收订单通知等服务</label>
+							
+						</div>
+						<div class="password">
+							<label for="password" class="title" >登录密码</label>
+							<input type="password" name="password"  id="password" placeholder="" />
+							
+							<label  id="password-error" class="error error_tip" for="password"></label>
+						</div>
+						<div class="confirm">
+							<label for="confirm" class="title" >确认密码</label>
+							<input type="password" name="confirm" value="" placeholder="" id="confirm"/>
+							
+							<label  id="confirm-error" class="error error_tip" for="confirm"></label>
+						</div>
+						<!--<div class="code">
+							<label for="auth_code">验证码</label>
+							<input type="text" name="auth_code" value="" placeholder="" />
+							
+							<span></span>
+							<i></i>
+							<a href="javascript:;">换张图</a>
+							<p class="error"></p>
+						</div>-->
+						<p class="agree">
+							<input type="checkbox" class="{required:true}" id="agree" name="agree" />
+							<span>我已阅读并同意<a href="javascript:;">《当当交易条款》</a>和<a href="javascript:;"> 《当当社区条款》</a></span>
+							<label id="agree-error" class="error error_tip" for="agree"></label>
+						</p>
+						<div class="submit">
+							<input type="submit" name="submit" value="注册">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+<!------------------注册底部-->
+	<div id="footer">
+		
+	</div>
+	
+</body>
+</html>

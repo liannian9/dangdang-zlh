@@ -1,0 +1,95 @@
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+html#resgistor{
+    font-size: 12px;
+    color: #404040;
+    font-family: 'Microsoft YaHei';
+    background-color: #f6f9fb;
+}
+#resgistor_header{
+    .header{
+        width: 960px;
+        margin: 0 auto;
+        padding-top: 2px;
+        height: 71px;
+        color: #404040;
+        background: #fff url('https://login.dangdang.com/images/unite_header_bg_1101.gif') repeat-x 0 -148px;
+        border-bottom:3px solid #f07700;
+        font: 12px/18px "\5b8b\4f53",Arial,Helvetica,sans-serif;
+        a{
+            text-decoration:none;
+            display: inline-block;
+            &:hover{
+              text-decoration:underline;  
+            }
+        }
+        .left{
+            float:left;
+        }
+        .right{
+            width:788px;
+            float:right;
+            .top{
+                height: 21px;
+                a{color:#404040}
+                @include clearfix();
+            }
+            .bottom{
+                padding: 2px 10px 0 0;
+                margin-left: 328px;
+                width: 450px;
+                height: 19px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-align: right;
+                a{
+                    color:#1a66b3
+                }
+            }    
+            
+            li{
+                float:right;
+                a{
+                    padding:1px 6px 0;
+                }
+                a:hover{
+                    color:#f60;
+                }
+            }
+            li:nth-of-type(7){
+                a{
+                    padding-right: 15px;
+                    background: url(../img/unite_header_1101.gif) no-repeat -106px -236px;
+                }
+            }
+            li:nth-of-type(9){
+                a{
+                    padding-right: 15px;
+                    background: url(../img/unite_header_1101.gif) no-repeat -94px -236px;
+                }
+                a:hover{
+                    
+                }
+            }
+            li:last-child{
+                padding-left:14px;
+                background: url(../img/unite_header_1101.gif) no-repeat 0 -234px;
+            }
+            li:nth-of-type(even){
+                padding: 0;
+                width: 1px;
+                height: 21px;
+                background: url('https://login.dangdang.com/images/unite_header_bg_1101.gif') no-repeat 0 -102px;
+                font-size: 0;
+                line-height: 0;
+                overflow: hidden;
+            }
+        }
+    }
+}

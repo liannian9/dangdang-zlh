@@ -1,0 +1,51 @@
+.h_nav {
+    width: 100%;
+    height: 40px;
+    border-bottom: 3px solid #ff2832;
+    ul {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    li {
+        float: left;
+        text-align: center;
+        position: relative;
+        a {
+            color: #323232;
+            font: 14px/40px "Microsoft Yahei";
+            text-decoration: none;
+            padding: 0 15px;
+            display: block;
+            font-weight: bold;
+            &:hover {
+                color: #ff2832!important;
+            }
+        }
+        span {
+            position: absolute;
+            display: block;
+            bottom: 26px;
+            left: 50%;
+            margin-left: -28px;
+            text-align: center;
+            font-size: 0;
+        }
+    }
+    .all {
+        width: 200px;
+        margin-right: 17px;
+        text-align: left;
+        background: #ff2832;
+        position: relative;
+        a {
+            padding: 0 0 0 20px;
+            display: block;
+            width: 171px;
+            background: url('http://img63.ddimg.cn/upload_img/00459/home/head_sprite.png') no-repeat 161px -567px;
+            color: #fff!important;
+            &:hover {
+                color: #fff!important;
+            }
+        }
+    }
+}

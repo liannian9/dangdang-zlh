@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="script/thirdplugins/require.js" async="true" defer="defer" data-main="script/js/cart.js"></script>
+		<title>购物车</title>
+	</head>
+
+	<body id="cart">
+		<div id="cart_header">
+			<div class="tools">
+
+			</div>
+			<div class="ad">
+				<a href="javascript:;"><img src="http://img60.ddimg.cn/2018/12/6/2018120610023378642.jpg" alt="" /></a>
+			</div>
+			<div class="direct">
+				<div class="logo">
+					<a href="index.html"><img src="http://shopping.dangdang.com/shoppingcart/images/dd_logo.jpg?v=20181019" alt="" /></a>
+				</div>
+				<div class="shopping_procedure">
+					<span class="current">我的购物车</span>
+					<span>填写订单</span>
+					<span>完成订单</span>
+				</div>
+			</div>
+		</div>
+		<div id="cart_section_unlogin" style="display:none;">
+			<p>您还没有登录，您可以：</p>
+			<a href="login.html" >立即登录</a>登录后购物车的商品将保存到您的账号中，或者
+			<a href="index.html">去逛逛</a>
+		</div>
+		<div id="cart_section_empty" style="display:none;">
+			<p>您的购物车还是空的，您可以：</p>
+			
+			<a href="index.html">去逛逛</a>
+		</div>
+		<div id="cart_section_has">
+			<div class="cart_address">
+				<div class="w960">
+					<div class="address">
+						<span></span>
+						<div>配送地址</div>
+						<div class="select_add">
+							<span>北京市顺义区</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="shopping_list">
+				<div class="shopping_title">
+					<div class="checkall checkbox ">
+						<a href="javascript:;" class="on"></a>全选
+					</div>
+					<div class="title1">商品信息</div>
+					<div class="title2">单价（元）</div>
+					<div class="title3">数量</div>
+					<div class="title4">金额（元）</div>
+					<div class="title5">操作</div>
+				</div>
+				<div class="shopping_products">
+					<div class="dd_self">
+						<div class="checkall2 checkbox"><a href="javascript:;" class="on"></a></div>
+						<div class="s_logo"></div>
+						<div class="content">
+							<a href="javascript:;">当当自营</a>
+						</div>
+					</div>
+					<div class="list">
+						
+						<div class="list_total">
+							<div class="shopping_total">店铺合计</div>
+							<div class="shopping_tip">
+								<span>满46元包邮</span>
+								<a href="javascript:;">免运费凑单</a>
+							</div>
+							<div class="money_total"><span class="red">¥<span>19.50</span></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="close_count">
+				<div class="left">
+					<div class="checkall checkbox">
+						<a href="javascript:;" class="on"></a>全选
+					</div>
+					<a href="javascript:;">批量删除</a>
+					<span>已选择<span class="red">1</span>件商品</span>
+				</div>
+				<div class="right">
+					<a href="javascript:;">结算</a>
+					<div class="subtotal">
+						<p><span>总计(不含运费)：</span><span class="red">￥<span>19.50</span></span></p>
+						<p><span>已节省</span><span>￥0.00</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+
+
+		<div id="fixedbar">
+			<div >
+				<a target="_blank" href="javascript:;">问卷调查</a>
+			</div>
+		</div>
+		<div id="footer">
+
+		</div>
+		
+	</body>
+
+</html>

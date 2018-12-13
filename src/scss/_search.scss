@@ -1,0 +1,148 @@
+ .h_search {
+     position: relative;
+     .search {
+         height: 100px;
+         width: 1200px;
+         margin: 0 auto;
+         position: relative;
+         .left {
+             overflow: hidden;
+             width: 362px;
+             height: 100px;
+             vertical-align: middle;
+             position: absolute;
+             left: 0;
+             top: 0;
+         }
+         .right {
+             height: 36px;
+             position: absolute;
+             top: 20px;
+             right: 0;
+             font: 14px/36px "Microsoft Yahei";
+             a {
+                 float: right;
+             }
+         }
+         .cart {
+             border: 2px solid #dcdcdc;
+             right: 88px;
+             border-color: #ff2832;
+             background: url('http://img62.ddimg.cn/upload_img/00459/home/icon_cart.png') 5px 0 no-repeat #ff2832;
+             padding-left: 35px;
+             width: 72px;
+             color: #fff!important;
+             &:hover {
+                 background-position: 5px -36px;
+                 background-color: #f6f6f6;
+                 border-color: #dcdcdc;
+                 color: #ff2832!important;
+             }
+             i {
+                 padding-left: 3px;
+                 font-family: Arial;
+                 font-weight: bold;
+                 font-style: normal;
+             }
+         }
+         .order {
+             border: 2px solid #dcdcdc;
+             width: 86px;
+             padding: 0;
+             text-align: center;
+             right: 0;
+             border-left: 0;
+             background-color: #f6f6f6;
+             &:hover {
+                 color: #ff2832!important;
+             }
+             
+         }
+         .mid {
+             position: absolute;
+             margin-top: 20px;
+             height: 48px;
+             z-index: 9999;
+             left: 362px;
+             top: 0
+         }
+         .frame {
+             input {
+                 width: 398px;
+                 height: 18px;
+                 border: 2px solid #ff2832;
+                 border-right: none;
+                 padding: 9px 0 9px 10px;
+                 position: absolute;
+                 left: 0;
+                 top: 0;
+                 z-index: 2;
+                 color: #323232;
+                 font: 12px/18px 'Hiragino Sans GB', "simsun", Arial;
+                 outline: 0;
+                 background: none
+             }
+             span {
+                 position: absolute;
+                 top: 0px;
+                 left: 410px;
+                 border: 2px solid #ff2832;
+                 border-left: 0px solid #dedede;
+                 width: 92px;
+                 height: 36px;
+                 font: 16px/36px "Microsoft Yahei";
+                 color: #969696;
+                 padding: 0 0 0 14px;
+                 cursor: pointer;
+                 background-color: #f6f6f6;
+             }
+             .triangle {
+                 width: 13px;
+                 height: 7px;
+                 overflow: hidden;
+                 background: url('http://img63.ddimg.cn/upload_img/00459/home/head_sprite.png') no-repeat -14px -90px;
+                 position: absolute;
+                 left: 88px;
+                 top: 16px;
+             }
+         }
+         .btn {
+             width: 48px;
+             height: 40px;
+             border: none;
+             background: url('http://img63.ddimg.cn/upload_img/00459/home/head_sprite.png') no-repeat 0 -346px;
+             cursor: pointer;
+             position: absolute;
+             left: 517px;
+             top: 0;
+         }
+     }
+     .mid_bottom {
+         position: absolute;
+         top: 45px;
+         left: 0px;
+         color: #969696;
+         width: 585px;
+         line-height: 20px;
+         z-index: 6666;
+         a {
+             color: #969696;
+             margin-right: 15px;
+             height: 20px;
+             overflow: hidden
+         }
+         a:hover {
+             color: #ff2832!important;
+             text-decoration: underline!important;
+         }
+         .hot {
+             float: left;
+             width: 518px;
+             overflow: hidden;
+             height: 20px
+         }
+         >a {
+             float: left;
+         }
+     }
+ }

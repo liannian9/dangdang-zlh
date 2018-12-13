@@ -1,0 +1,27 @@
+@charset "utf-8";
+/*-------首页头部------*/
+@import 'index_header';
+/*-------首页主体------*/
+@import 'index_sections';
+/*-------首页侧边栏------*/
+@import 'index_sidebar';
+/*-------登录头部------*/
+@import 'login_header';
+/*-------登录主体------*/
+@import 'login_body';
+/*-------注册头部------*/
+@import 'registor_header';
+/*-------注册主体------*/
+@import 'registor_body';
+/*-------购物车------*/
+@import 'cart';
+/*-------详情页------*/
+@import 'details';
+/*-------公用搜索栏--index+details----*/
+@import 'search';
+/*-------公用底部--所有----*/
+@import 'footer';
+/*-------公用导航-index+details-----*/
+@import 'nav';
+/*-------公用工具栏--index+details+cart-----*/
+@import 'tools';
